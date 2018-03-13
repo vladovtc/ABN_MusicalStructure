@@ -79,7 +79,7 @@
                 <Button
                     android:id="@+id/btn_play_previous"
                     android:layout_width="@dimen/dp50"
-                    android:layout_height="@dimen/dp16"
+                    android:layout_height="@dimen/dp50"
                     android:background="@drawable/ic_play_previous"/>
 
                 <Button
