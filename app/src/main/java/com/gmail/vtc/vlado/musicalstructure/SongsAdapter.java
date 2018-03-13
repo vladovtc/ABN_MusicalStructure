@@ -1,5 +1,7 @@
 package com.gmail.vtc.vlado.musicalstructure;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +21,6 @@ public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.MyViewHolder
 
     public SongsAdapter(List<Songs> songsList) {
         this.songsList = songsList;
-
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -35,16 +36,25 @@ public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.MyViewHolder
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
 
-
-        Songs songs = songsList.get(position);
+        final Songs songs = songsList.get(position);
 
         String s = String.valueOf(position + 1) + ". " + songs.getArtistAndSong();
 
         holder.imageView.setImageResource(songs.getPicture());
         holder.textView.setText(s);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(v.getContext(), NowPlayingActivity.class);
+                intent.putExtra("artist_name", songs.getArtistAndSong());
+                intent.putExtra("artist_image", songs.getPicture());
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

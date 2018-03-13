@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/dp16"
     android:paddingRight="@dimen/dp16"
     android:paddingBottom="8dp"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="@android:color/darker_gray">
 
     <ImageView
         android:id="@+id/iv_row_picture"
@@ -15,7 +16,7 @@
 
     <TextView
         android:id="@+id/tv_row_title"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:paddingLeft="8dp"
         android:textSize="18sp"

@@ -1,15 +1,11 @@
 package com.gmail.vtc.vlado.musicalstructure;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +17,6 @@ public class MainActivity extends AppCompatActivity {
     SongsAdapter songsAdapter;
 
     private RecyclerView recyclerView;
-
-    public static final String KEY_ARTIST = "artist_and_song_name";
-    public static final String KEY_PICTURE = "picture";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,29 +36,6 @@ public class MainActivity extends AppCompatActivity {
         songsAdapter = new SongsAdapter(songsList);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(songsAdapter);
-
-        recyclerView.addOnItemTouchListener(new RecyclerItemListener(getApplicationContext(),
-                recyclerView, new RecyclerItemListener.RecyclerTouchListener() {
-            @Override
-            public void onClickItem(View view, int position) {
-
-                startActivity(new Intent(MainActivity.this, NowPlayingActivity.class));
-
-//                Intent intent = new Intent(MainActivity.this, NowPlayingActivity.class);
-//                intent.putExtra(KEY_ARTIST, position);
-//                intent.putExtra(KEY_PICTURE, position);
-
-                Toast.makeText(MainActivity.this, "On Click Item interface", Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onLongClickItem(View view, int position) {
-
-                Toast.makeText(MainActivity.this, "On Long Click Item interface", Toast.LENGTH_SHORT).show();
-
-            }
-        }));
     }
 
     private void createList() {

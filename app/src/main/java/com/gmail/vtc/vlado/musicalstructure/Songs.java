@@ -18,15 +18,7 @@ public class Songs {
         return artistAndSong;
     }
 
-    public void setArtistAndSong(String artistAndSong) {
-        this.artistAndSong = artistAndSong;
-    }
-
     public int getPicture() {
         return picture;
-    }
-
-    public void setPicture(int picture) {
-        this.picture = picture;
     }
 }
