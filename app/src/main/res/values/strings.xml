@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Musical Structure</string>
+    <string name="action_youtube">Youtube</string>
+    <string name="playlist">Playlist</string>
+</resources>
