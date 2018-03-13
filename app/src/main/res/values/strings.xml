@@ -2,4 +2,17 @@
     <string name="app_name">Musical Structure</string>
     <string name="action_youtube">Youtube</string>
     <string name="playlist">Playlist</string>
+    <string name="chuck_berry_johnny">Chuck Berry - Johnny B. Goode</string>
+    <string name="elvis_presley_jailhouse">Elvis Presley - Jailhouse Rock</string>
+    <string name="eddie_cochran_summertime">Eddie Cochran - Summertime Blues</string>
+    <string name="chuck_berry_maybellene">Chuck Berry - Maybellene</string>
+    <string name="carl_perkins_blue_suede_shoes">Carl Perkins - Blue Suede Shoes</string>
+    <string name="everley_brothers_bye_bye">Everly Brothers - Bye Bye Love</string>
+    <string name="jeery_lee_lewis_great_balls">Jerry Lee Lewis - Great Balls Of Fire</string>
+    <string name="penguins_earth_angel">Penguins - Earth Angel</string>
+    <string name="gene_vincent_be_bop"><![CDATA[Gene Vincent & the Bluecaps - Be-Bop-A-Lula]]></string>
+    <string name="ritchie_valens_la_bamba">Ritchie Valens - La Bamba</string>
+    <string name="everly_brothers_all_i_have_is">Everly Brothers - All I Have To Do Is Dream</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="artist_name_song_name">Artist name - Song name</string>
 </resources>

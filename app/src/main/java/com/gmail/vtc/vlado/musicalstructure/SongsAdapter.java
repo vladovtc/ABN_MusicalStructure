@@ -1,6 +1,5 @@
 package com.gmail.vtc.vlado.musicalstructure;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -22,6 +21,10 @@ public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.MyViewHolder
     public SongsAdapter(List<Songs> songsList) {
         this.songsList = songsList;
     }
+
+    /**
+     * View holder class
+     */
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 

@@ -7,7 +7,6 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 public class NowPlayingActivity extends AppCompatActivity {
 
     TextView textView;
@@ -18,14 +17,26 @@ public class NowPlayingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_now_playing);
 
+        /**
+         * Initialize Toolbar and set properties
+         */
+
         Toolbar toolbar = findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        /**
+         * Initialize Views
+         */
+
         textView = findViewById(R.id.tv_artist_and_song);
         imageView = findViewById(R.id.image_view);
+
+        /**
+         * Get data from Intent and set it to text and image view
+         */
 
         Intent intent = getIntent();
         Bundle extras = getIntent().getExtras();
@@ -35,7 +46,6 @@ public class NowPlayingActivity extends AppCompatActivity {
 
         textView.setText(music);
         imageView.setImageResource(imageId);
-
     }
 
     @Override
